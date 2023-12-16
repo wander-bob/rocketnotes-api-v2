@@ -17,7 +17,7 @@ server.use(routes);
 migrationsRun();
 
 server.use((error, request, response, next) =>{
-  console.log(error);
+  console.log(error, response);
   if(error instanceof AppError){
     return response.status(error.statusCode).json({
       status: "error",
