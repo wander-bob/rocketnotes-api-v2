@@ -8,7 +8,7 @@ const migrationsRun = require('./database/sqlite/migrations');
 const  multerConfig = require("./configs/upload");
 
 const server = express();
-const port = process.env.SERVER_PORT;
+const port = process.env.SERVER_PORT || 3333;
 
 server.use(express.json());
 server.use(cors());
